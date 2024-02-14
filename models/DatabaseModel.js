@@ -1,13 +1,16 @@
 // DatabaseModel.js
 import pkg from "pg";
 const { Client } = pkg;
+import dotenv from 'dotenv';
+dotenv.config();
 
 const dbConfig = {
-  user: "postgres",
-  host: "localhost",
-  database: "customdb",
-  password: "user1234",
-  port: 5432,
+  // user: "postgres",
+  // host: "localhost",
+  // database: "customdb",
+  // password: "user1234",
+  // port: 5432,
+  connectionString: process.env.POSTGRES_URL ,
 };
 
 const dbClient = new Client(dbConfig);
