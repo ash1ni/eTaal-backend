@@ -26,7 +26,7 @@ async function runDdlScripts() {
     const stdout = execSync(`bash main.sh`, { encoding: "utf-8" });
   }
   
-  runDdlScripts();
+  // runDdlScripts();
 
 app.post("/text-to-sql", getTextToSql);
 app.post('/bar-graph', getBargraph);
